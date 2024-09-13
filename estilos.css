@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #373636; /* Fondo negro */
+}
+
+.calculadora {
+    width: 340px;
+    background-color: #252121; /* Fondo rojizo de la calculadora */
+    padding: 30px; /* Aumenta el padding para más espacio alrededor */
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+}
+
+.pantalla {
+    background-color: #000000; /* Fondo negro */
+    color: #ff4d4d; /* Texto rojo claro */
+    font-size: 2em;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.boton {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    background-color: #e60000; /* Color de los botones rojizos */
+    color: #fff;
+    cursor: pointer;    
+    transition: background-color 0.2s ease;
+}
+
+.boton.operador {
+    background-color: #ff6600; /* Botones de operación un poco más claros */
+}
+
+.boton:active {
+    background-color: #990000; /* Oscurecer el botón cuando se presiona */
+}
+
+.boton.operador:active {
+    background-color: #b14801; /* Oscurecer el botón de operación cuando se presiona */
+}
+
+@media (max-width: 768px) {
+    .calculadora {
+        width: 100%;
+        margin: 20px;
+    }
+}
